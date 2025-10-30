@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AirPlay Audio Sender</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+      width: 320px;
+      padding: 16px;
+      background: #f6f7fb;
+      color: #1f1f1f;
+    }
+    h2 { margin: 0 0 12px; text-align: center; }
+    label { font-weight: 600; margin-top: 12px; display: block; }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #cfcfd6;
+      border-radius: 6px;
+      box-sizing: border-box;
+      margin-top: 6px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border: 0;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+    #startBtn { background: #007aff; }
+    #startBtn:hover { background: #0062c7; }
+    #stopBtn { background: #ff3b30; }
+    #stopBtn:hover { background: #d02a22; }
+    #status {
+      margin-top: 12px;
+      font-size: 12px;
+      background: #eef0f4;
+      padding: 10px;
+      border-radius: 6px;
+      min-height: 20px;
+      word-break: break-word;
+    }
+    small { color: #565b66; display: block; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <h2>AirPlay Audio</h2>
+
+  <label for="receiverIp">Apple TV IP</label>
+  <input id="receiverIp" type="text" placeholder="e.g. 192.168.1.45" />
+
+  <button id="startBtn">Start</button>
+  <button id="stopBtn">Stop</button>
+
+  <div id="status">Idle</div>
+  <small>Requires backend at http://localhost:8090</small>
+
+  <script src="popup.js"></script>
+</body>
+</html>
